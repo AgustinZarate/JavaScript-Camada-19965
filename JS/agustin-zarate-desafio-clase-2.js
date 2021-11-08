@@ -1,4 +1,5 @@
 //Desafio clase 2
+//Crear un algoritmo con un condicional
 let heladoChocolate = 80
 let stockHeladoCholoclate = 5
 let pedido = parseInt(prompt("Bienvenido a nuestra heladeria, el helado de chocolate cuesta $" + heladoChocolate +  " , ¿Cuantos helados quiere llevar?"))
