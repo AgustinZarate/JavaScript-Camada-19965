@@ -1,6 +1,7 @@
 const descripcion = "elija el numero del apartado para saber el precio: \n" +
     " 1.Titular \n" + 
     " 2.Suplente \n" +
+    " 3.Proveedor (venta de camisetas al por mayor) \n" +
     " para salir escriba (esc)";
 
 let stockCamisetaTitular = 10
@@ -17,6 +18,15 @@ function ventaStockCamisetaTitular (cantidad) {
 }
 function ventaStockCamisetaSuplente (cantidad) {
     stockCamisetaSuplente -= cantidad
+    console.log (stockCamisetaSuplente)
+}
+
+function adquisicionStockCamisetaTitular(cantidad) {
+    stockCamisetaTitular += cantidad
+    console.log (stockCamisetaTitular)
+}
+function adquisicionStockCamisetaSuplente(cantidad) {
+    stockCamisetaSuplente += cantidad
     console.log (stockCamisetaSuplente)
 }
 
@@ -153,9 +163,30 @@ function ventaStockCamisetaSuplente (cantidad) {
                         alert("La cantidad de camisetas supera al stock existente")
                     }
                     break;
-        
+
+            case "3": 
+                    let ventaCamisetas = parseInt(prompt("Bienvenido, usted nos quiere vender camisetas \n 1. Titulares \n o 2. Suplentes" ))
+                    if (ventaCamisetas = 1) {
+                        let compraStockTitular = parseInt(prompt ("Por camiseta nosotros entregaremos $650, cuantas camisetas quiere vendernos"))
+                        if (compraStockTitular > 0) {
+                            alert ("Muchas grcias, el valor de su venta es de " + (compraStockTitular * 650))
+                            adquisicionStockCamisetaTitular(compraStockTitular)
+                        }
+
+                    } else if (ventaCamisetas = 2) {
+                        let compraStockSuplente = parseInt(prompt ("Por camiseta nosotros entregaremos $500, cuantas camisetas quiere vendernos"))
+                        if (compraStockSuplente > 0) {
+                            alert ("Muchas grcias, el valor de su venta es de " + (compraStockSuplente * 500))
+                            adquisicionStockCamisetaSuplente(compraStockSuplente)
+                        }
+
+
+                    }
+                break;
+
+
             default:
-                alert("Por favor elija una opcion correcta al colocar 1 (camiseta titular) o 2 (camiseta suplente)")
+                alert("Por favor elija una opcion correcta al colocar 1 (camiseta titular), 2 (camiseta suplente) o 3 (Venta de camisetas al por mayor)")
                 break;
         }
         opcion = prompt(descripcion)
