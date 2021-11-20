@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    background: rgb(166, 136, 247);
+    color: rgb(13, 13, 14);
+    border-radius: 18px;
+    outline: none;
+    margin: 50px;
+}
+button:hover {
+    color: rebeccapurple;
+}
+#showing {
+    margin: 1rem 0;
+    padding: 12px;
+    font-size: 2.1rem;
+    min-width: 90px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+#rivalCards {
+    min-height: 200px;
+}
+
+#showing img {
+    width: 130px;
+    height: 200px;
+}
+#rivalCards img {
+    width: 130px;
+    height: 200px;
+}
