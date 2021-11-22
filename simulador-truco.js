@@ -88,7 +88,6 @@ function displayHand() {
         /* ---------------- CARTAS ----------------- 
         --------------------- DEL ------------------
         ------------------- JUGADOR ----------------*/
-        //console.log("mano del jugador")
 
         let firstCard = mazo[Math.floor(Math.random() * mazo.length)];
         let iFirstCard = mazo.indexOf(firstCard);
@@ -117,82 +116,35 @@ function displayHand() {
     //ERROR Los indices 38 y 39 no se quitan
     //SOLUCION Era que no encontraba esos indices, porque al sacar cartes cambiaba el valor
     
+    //Array mano del jugador
+    let playerHand = [firstCard, secondCard, thirdCard]
+    console.log("mano jugador :")
+    console.log(playerHand)
 
     let showCard = `
     
-    <div class="d-flex justify-content-around">
-    <img src="${firstCard.imagen}">
-    <img src="${secondCard.imagen}">
-    <img src="${thirdCard.imagen}">
+    <div class="d-flex justify-content-around" id="playerCards">
+    <img src="${playerHand[0].imagen}">
+    <img src="${playerHand[1].imagen}">
+    <img src="${playerHand[2].imagen}">
     </div>
     
     `;
-
-
     
 
 
 
-    //console.log("-\n-\n-\n-\n-\n-\n-\n-\n-\n-")
-
-
-    /* ------------------- CARTAS ----------------- 
-        -------------------- DEL ------------------
-        ------------------- RIVAL ----------------*/
-
-        //console.log("mano rival: ")
-
-        let rivalFirstCard = mazo[Math.floor(Math.random() * mazo.length)];
-        let iRivalFirstCard = mazo.indexOf(rivalFirstCard);
-        //console.log("indice de la primera carta: ", iRivalFirstCard)
-        //console.log(rivalFirstCard)
-        mazo.splice(iRivalFirstCard, 1)
-
-
-        let rivalSecondCard = mazo[Math.floor(Math.random() * mazo.length)];
-        let iRivalSecondCard = mazo.indexOf(rivalSecondCard);
-        //console.log("indice de la segunda carta: ", iRivalSecondCard)
-        //console.log(rivalSecondCard)
-        mazo.splice(iRivalSecondCard, 1)
-
-        
-        let rivalThirdCard = mazo[Math.floor(Math.random() * mazo.length)];
-        let iRivalThirdCard = mazo.indexOf(rivalThirdCard);
-        //console.log("indice de la tercera carta: ", iRivalThirdCard)
-        //console.log(rivalThirdCard)
-        mazo.splice((iRivalThirdCard), 1)
-
-
-    let rivalCards = `
-    
-    <div class="d-flex justify-content-around">
-    <img src="${rivalFirstCard.imagen}">
-    <img src="${rivalSecondCard.imagen}">
-    <img src="${rivalThirdCard.imagen} ">
-    </div>
-    
-    `;
-
-        document.getElementById("showing").innerHTML = showCard;
-        document.getElementById("rivalCards").innerHTML = rivalCards;
-    
-
-
-
-
-
-
-
-
-
-    //console.log (mazo)
 
     //tantos
     if (firstCard.palo === secondCard.palo && firstCard.palo === thirdCard.palo ) {
         console.log("tenes flor")
     } else {
     
+    //------------------------------------------
     //COMPARACION PRIMER CARTA CON SEGUNDA CARTA
+    //-------------------------------------------
+    
+    
     
     //evaluamos que la primera carta tenga el mismo palo que la segunda
     if (firstCard.palo === secondCard.palo) {
@@ -233,12 +185,12 @@ function displayHand() {
         
         } 
     
-    
-    
-    
-    
-        //COMPARACION SEGUNDA CARTA CON TERCERA CARTA
-    
+    //------------------------------------------
+    //COMPARACION SEGUNDA CARTA CON TERCERA CARTA
+    //-------------------------------------------
+
+
+
     //evaluamos que la SEGUNDA carta tenga el mismo palo que la TERCERA
     if (secondCard.palo === thirdCard.palo) {
     
@@ -279,10 +231,11 @@ function displayHand() {
         } 
     
     
-    
-    
+    //----------------------------------------------
     //COMPARACION TERCERA CARTA CON LA PRIMERA CARTA
-    
+    //----------------------------------------------
+
+
     //evaluamos que la TERCERA carta tenga el mismo palo que la PRIMERA
     if (thirdCard.palo === firstCard.palo) {
     
@@ -323,8 +276,236 @@ function displayHand() {
         } 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log("\n\n\n\n\n\n\n\n\n")
+
+
+    /* ------------------- CARTAS ----------------- 
+        -------------------- DEL ------------------
+        ------------------- RIVAL ----------------*/
+
+        //console.log("mano rival: ")
+
+        let rivalFirstCard = mazo[Math.floor(Math.random() * mazo.length)];
+        let iRivalFirstCard = mazo.indexOf(rivalFirstCard);
+        //console.log("indice de la primera carta: ", iRivalFirstCard)
+        //console.log(rivalFirstCard)
+        mazo.splice(iRivalFirstCard, 1)
+
+
+        let rivalSecondCard = mazo[Math.floor(Math.random() * mazo.length)];
+        let iRivalSecondCard = mazo.indexOf(rivalSecondCard);
+        //console.log("indice de la segunda carta: ", iRivalSecondCard)
+        //console.log(rivalSecondCard)
+        mazo.splice(iRivalSecondCard, 1)
+
+        
+        let rivalThirdCard = mazo[Math.floor(Math.random() * mazo.length)];
+        let iRivalThirdCard = mazo.indexOf(rivalThirdCard);
+        //console.log("indice de la tercera carta: ", iRivalThirdCard)
+        //console.log(rivalThirdCard)
+        mazo.splice((iRivalThirdCard), 1)
+
+
+
+    
+    //Array mano del rival
+    let rivalHand = [rivalFirstCard, rivalSecondCard, rivalThirdCard]
+    console.log("mano rival :")
+    console.log(rivalHand)
+
+    let rivalCards = `
+    
+    <div class="d-flex justify-content-around" id="rivalCards">
+    <img src="${rivalHand[0].imagen}">
+    <img src="${rivalHand[1].imagen}">
+    <img src="${rivalHand[2].imagen} ">
+    </div>
+    
+    `;
+
+        document.getElementById("showing").innerHTML = showCard;
+        document.getElementById("rivalCards").innerHTML = rivalCards;
+    
+
+
+
+        //tantos RIVAL
+        if (rivalFirstCard.palo === rivalSecondCard.palo && rivalFirstCard.palo === rivalThirdCard.palo ) {
+            console.log("tenes flor")
+        } else {
+        
+        //------------------------------------------
+        //COMPARACION PRIMER CARTA CON SEGUNDA CARTA
+        //-------------------------------------------
+        
+        
+        
+        //evaluamos que la primera carta tenga el mismo palo que la segunda
+        if (rivalFirstCard.palo === rivalSecondCard.palo) {
+        
+            //-----------------------------------
+            //-- primer carta NO es una figura --
+            //-----------------------------------
+            if (rivalFirstCard.valor < 19) {
+                //primera carta no es una figura entoces, evaluamos segunda carta no sea una figura
+                    if (rivalSecondCard.valor < 19) {
+                        //segunda carta TAMPOCO es una figura, entonces evaluamos los tantos
+                        let tantos = (rivalFirstCard.valor + rivalSecondCard.valor) + 20
+                        console.log(rivalFirstCard.numero + " " + rivalFirstCard.palo + " + " + rivalSecondCard.numero + " " +  rivalSecondCard.palo + " / tantos = " + tantos)
+                    } else {
+                        //segunda carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = rivalFirstCard.valor + rivalSecondCard.valor
+                        console.log(rivalFirstCard.numero + " " + rivalFirstCard.palo + " + " + rivalSecondCard.numero + " " + rivalSecondCard.palo + " / tantos = " + tantos)
+                    }
+        
+        
+                    
+            //-----------------------------------
+            //-- primer carta ES es una figura --
+            //-----------------------------------
+                } else {
+                    //evaluamos la segunda
+                    if (rivalSecondCard.valor < 19) {
+                        //segunda carta NO es una figura, entonces evaluamos los tantos
+                        let tantos = rivalFirstCard.valor + rivalSecondCard.valor
+                        console.log(rivalFirstCard.numero + " " + rivalFirstCard.palo + " + " + rivalSecondCard.numero + " " + rivalSecondCard.palo + " / tantos = " + tantos)
+                    } 
+                    else { 
+                        //segunda carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = 20
+                        console.log(rivalFirstCard.numero + " " + rivalFirstCard.palo + " + " + rivalSecondCard.numero + " " + rivalSecondCard.palo + " / tantos = " + tantos)
+                    }
+                }
+            
+            } 
+        
+        //------------------------------------------
+        //COMPARACION SEGUNDA CARTA CON TERCERA CARTA
+        //-------------------------------------------
+    
+    
+    
+        //evaluamos que la SEGUNDA carta tenga el mismo palo que la TERCERA
+        if (rivalSecondCard.palo === rivalThirdCard.palo) {
+        
+            //-----------------------------------
+            //-- segunda carta NO es una figura --
+            //-----------------------------------
+            if (rivalSecondCard.valor < 19) {
+                //segunda carta no es una figura entoces, evaluamos segunda carta no sea una figura
+                    if (rivalThirdCard.valor < 19) {
+                        //tercera carta TAMPOCO es una figura, entonces evaluamos los tantos
+                        let tantos = (rivalSecondCard.valor + rivalThirdCard.valor) + 20
+                        console.log(rivalSecondCard.numero + " " + rivalSecondCard.palo + " + " + rivalThirdCard.numero + " " + rivalThirdCard.palo + " / tantos = " + tantos)
+                    } else {
+                        //tercera carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = rivalSecondCard.valor + rivalThirdCard.valor
+                        console.log(rivalSecondCard.numero + " " + rivalSecondCard.palo + " + " + rivalThirdCard.numero + " " + rivalThirdCard.palo + " / tantos = " + tantos)
+                    }
+            
+            
+                        
+            //-----------------------------------
+            //-- segunda carta ES es una figura --
+            //-----------------------------------
+                } else {
+                    //evaluamos la tercera
+                    if (rivalThirdCard.valor < 19) {
+                        //tercera carta NO es una figura, entonces evaluamos los tantos
+                        let tantos = rivalSecondCard.valor + rivalThirdCard.valor
+                        console.log(rivalSecondCard.numero + " " + rivalSecondCard.palo + " + " + rivalThirdCard.numero + " " + rivalThirdCard.palo + " / tantos = " + tantos)
+                    } 
+                    else { 
+                        //tercera carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = 20
+                        console.log(rivalSecondCard.numero + " " + rivalSecondCard.palo + " + " + rivalThirdCard.numero + " " + rivalThirdCard.palo + " / tantos = " + tantos)
+                    }
+                }
+            
+            } 
+        
+        
+        //----------------------------------------------
+        //COMPARACION TERCERA CARTA CON LA PRIMERA CARTA
+        //----------------------------------------------
+    
+    
+        //evaluamos que la TERCERA carta tenga el mismo palo que la PRIMERA
+        if (rivalThirdCard.palo === rivalFirstCard.palo) {
+        
+            //-----------------------------------
+            //-- TERCERA carta NO es una figura --
+            //-----------------------------------
+            if (rivalThirdCard.valor < 19) {
+                //TERCERA carta no es una figura entoces, evaluamos primera carta no sea una figura
+                    if (rivalFirstCard.valor < 19) {
+                        //primera carta TAMPOCO es una figura, entonces evaluamos los tantos
+                        let tantos = (rivalThirdCard.valor + rivalFirstCard.valor) + 20
+                        console.log(rivalThirdCard.numero + " " + rivalThirdCard.palo + " + " + rivalFirstCard.numero + " " + rivalFirstCard.palo + " / tantos = " + tantos)
+                    } else {
+                        //primera carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = rivalThirdCard.valor + rivalFirstCard.valor
+                        console.log(rivalThirdCard.numero + " " + rivalThirdCard.palo + " + " + rivalFirstCard.numero + " " + rivalFirstCard.palo + " / tantos = " + tantos)
+                    }
+        
+        
+                    
+            //-----------------------------------
+            //-- TERCERA carta ES es una figura --
+            //-----------------------------------
+                } else {
+                    //evaluamos la primera
+                    if (rivalFirstCard.valor < 19) {
+                        //primera carta NO es una figura, entonces evaluamos los tantos
+                        let tantos = rivalThirdCard.valor + rivalFirstCard.valor
+                        console.log(rivalThirdCard.numero + " " + rivalThirdCard.palo + " + " + rivalFirstCard.numero + " " + rivalFirstCard.palo + " / tantos = " + tantos)
+                    } 
+                    else { 
+                        //primera carta TAMBIEN ES una figura, evaluamos tantos
+                        let tantos = 20
+                        console.log(rivalThirdCard.numero + " " + rivalThirdCard.palo + " + " + rivalFirstCard.numero + " " + rivalFirstCard.palo + " / tantos = " + tantos)
+                    }
+                }
+            
+            } 
+        }
+
+
+        console.log("\n\n\n\n\n\n\n\n\n")
+        console.log ("mazo acrualizado :")
+        console.log(mazo)
+
+
+
 }
 
+
+
+console.log ("mazo :")
+console.log (mazo)
+console.log("\n\n\n\n\n\n\n\n\n")
 
 
 
