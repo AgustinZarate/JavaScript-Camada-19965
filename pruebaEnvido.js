@@ -140,6 +140,56 @@ if (firstCard.palo === secondCard.palo) {
 
 
 
+
+
+
+
+
+
+    //COMPARACION SEGUNDA CARTA CON TERCERA CARTA
+
+//evaluamos que la SEGUNDA carta tenga el mismo palo que la TERCERA
+if (secondCard.palo === thirdCard.palo) {
+
+    //-----------------------------------
+    //-- segunda carta NO es una figura --
+    //-----------------------------------
+    if (secondCard.valor < 19) {
+        //segunda carta no es una figura entoces, evaluamos segunda carta no sea una figura
+            if (thirdCard.valor < 19) {
+                //tercera carta TAMPOCO es una figura, entonces evaluamos los tantos
+                let tantos = (secondCard.valor + thirdCard.valor) + 20
+                console.log(secondCard.numero + " " + secondCard.palo + " + " + thirdCard.numero + " " + thirdCard.palo + " / tantos = " + tantos)
+            } else {
+                //tercera carta TAMBIEN ES una figura, evaluamos tantos
+                let tantos = secondCard.valor + thirdCard.valor
+                console.log(secondCard.numero + " " + secondCard.palo + " + " + thirdCard.numero + " " + thirdCard.palo + " / tantos = " + tantos)
+            }
+    
+    
+                
+    //-----------------------------------
+    //-- segunda carta ES es una figura --
+    //-----------------------------------
+        } else {
+            //evaluamos la tercera
+            if (thirdCard.valor < 19) {
+                //tercera carta NO es una figura, entonces evaluamos los tantos
+                let tantos = secondCard.valor + thirdCard.valor
+                console.log(secondCard.numero + " " + secondCard.palo + " + " + thirdCard.numero + " " + thirdCard.palo + " / tantos = " + tantos)
+            } 
+            else { 
+                //tercera carta TAMBIEN ES una figura, evaluamos tantos
+                let tantos = 20
+                console.log(secondCard.numero + " " + secondCard.palo + " + " + thirdCard.numero + " " + thirdCard.palo + " / tantos = " + tantos)
+            }
+        }
+    
+    } 
+
+
+
+
 /* if (mazo[39].palo === mazo[38].palo) {
     if (mazo[39].valor < 20) {
         console.log(mazo[39])
