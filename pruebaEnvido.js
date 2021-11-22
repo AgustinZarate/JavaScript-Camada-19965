@@ -87,12 +87,12 @@ let tantos = 0
 
 
 //tantos
-
-firstCard = mazo[15]
+firstCard = mazo[0]
 console.log(firstCard)
-secondCard = mazo[16]
+secondCard = mazo[14]
 console.log(secondCard)
-
+thirdCard = mazo[16]
+console.log(thirdCard)
 
 
 //COMPARACION PRIMER CARTA CON SEGUNDA CARTA
@@ -140,12 +140,6 @@ if (firstCard.palo === secondCard.palo) {
 
 
 
-
-
-
-
-
-
     //COMPARACION SEGUNDA CARTA CON TERCERA CARTA
 
 //evaluamos que la SEGUNDA carta tenga el mismo palo que la TERCERA
@@ -186,6 +180,58 @@ if (secondCard.palo === thirdCard.palo) {
         }
     
     } 
+
+
+
+
+//COMPARACION TERCERA CARTA CON LA PRIMERA CARTA
+
+//evaluamos que la TERCERA carta tenga el mismo palo que la PRIMERA
+if (thirdCard.palo === firstCard.palo) {
+
+    //-----------------------------------
+    //-- TERCERA carta NO es una figura --
+    //-----------------------------------
+    if (thirdCard.valor < 19) {
+        //TERCERA carta no es una figura entoces, evaluamos primera carta no sea una figura
+            if (firstCard.valor < 19) {
+                //primera carta TAMPOCO es una figura, entonces evaluamos los tantos
+                let tantos = (thirdCard.valor + firstCard.valor) + 20
+                console.log(thirdCard.numero + thirdCard.palo + " + " + firstCard.numero + firstCard.palo + " / tantos = " + tantos)
+            } else {
+                //primera carta TAMBIEN ES una figura, evaluamos tantos
+                let tantos = thirdCard.valor + firstCard.valor
+                console.log(thirdCard.numero + " " + thirdCard.palo + " + " + firstCard.numero + " " + firstCard.palo + " / tantos = " + tantos)
+            }
+
+
+            
+    //-----------------------------------
+    //-- TERCERA carta ES es una figura --
+    //-----------------------------------
+        } else {
+            //evaluamos la primera
+            if (firstCard.valor < 19) {
+                //primera carta NO es una figura, entonces evaluamos los tantos
+                let tantos = thirdCard.valor + firstCard.valor
+                console.log(thirdCard.numero + " " + thirdCard.palo + " + " + firstCard.numero + " " + firstCard.palo + " / tantos = " + tantos)
+            } 
+            else { 
+                //primera carta TAMBIEN ES una figura, evaluamos tantos
+                let tantos = 20
+                console.log(thirdCard.numero + " " + thirdCard.palo + " + " + firstCard.numero + " " + firstCard.palo + " / tantos = " + tantos)
+            }
+        }
+    
+    } 
+
+
+
+
+
+
+
+
 
 
 
