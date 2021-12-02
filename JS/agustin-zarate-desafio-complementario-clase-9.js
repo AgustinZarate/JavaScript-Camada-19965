@@ -1,4 +1,4 @@
-for (carta of mazo) {
+for (carta of JSON.parse(localStorage.getItem("allCartas"))) {
     let containerCatasMazo = document.createElement("div")
     containerCatasMazo.classList.add('col-1');
     containerCatasMazo.innerHTML = `
@@ -8,4 +8,3 @@ document.getElementById("cartasMazo").appendChild(containerCatasMazo);
 
 
 }  ;
-

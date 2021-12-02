@@ -538,3 +538,23 @@ function selectedCardOne(id) {
     console.log(id)
 }
 
+
+//-------------------
+//Storage y JSON
+//--------------------
+//session
+sessionStorage.setItem('nombreUsuario', prompt("por favor ingrese su nombre"));
+console.log("Nombre del Usuario: ", sessionStorage.getItem('nombreUsuario') )
+/* sessionStorage.setItem('edadUsuario', prompt("por favor ingrese su edad"));
+console.log("Edad del Usuario: ", sessionStorage.getItem('edadUsuario') ) */
+
+//usuario
+let usuario = document.getElementById("usuario");
+let pUsuario = document.createElement("p");
+pUsuario.innerHTML = `Mano de <b>${sessionStorage.getItem("nombreUsuario")}</b>`;
+usuario.appendChild(pUsuario);
+
+
+//local
+const allCartasJSON = JSON.stringify(mazo)
+localStorage.setItem("allCartas", allCartasJSON);
