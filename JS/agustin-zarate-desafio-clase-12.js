@@ -21,7 +21,7 @@ class Carta {
     }
 
 
-    
+
 
 mazo = [];
 //Espada
@@ -76,7 +76,8 @@ let tantos = 0
 
 
 
-
+// CLICK CON JQUERY
+$('#btn').on('click', displayHand())
 
 //ERROR = EXISTE LA POSIBILIDAD QUE DEVUELVA DOS CARTAS IGUALES
 /* SOLICION La solucion fue poner el indexOf(), antes de hacer el splice() 
@@ -123,35 +124,25 @@ function displayHand() {
     console.log("mano jugador :")
     console.log(playerHand)
 
-    let showCard = `
-    
+    //-------------------------------//
+    //-----------JQUERY-------------//
+    //-----------------------------//
+
+    //Dejo el inner en una variable para que las cartas en el html cambien y no se sigan agreando mas div's de cartas
+    let showCard =  `    
     <div class="d-flex justify-content-around row" id="playerCards">
-        <div class="col-4">
-        <input type="image" src="${playerHand[0].imagen}" id="cardOne" class=" carta igual">
-        </div>
-        <div class="col-4">
-        <input type="image" src="${playerHand[1].imagen}" id="CardTwo" class=" carta igual" >
-        </div>
-        <div class="col-4">
-        <input type="image" src="${playerHand[2].imagen}" id="cardThree" class=" carta igual">
-        </div>
+    <div class="col-4">
+    <input type="image" src="${playerHand[0].imagen}" id="cardOne" class=" carta igual">
     </div>
-    
-    `;
-    console.log('primera')
-    // let btn = document.getElementById('cardOne')
-    // btn.addEventListener('click', ()=> console.log('click'))
-
-    // for(let botones of btn) {
-    //     console.log(botones);
-    //     botones.addEventListener('click', ()=> console.log(botones.id))
-    // }
-
-
-//--------------------------------------
-//BUSCAR EL ID Y PONER LAS CARTAS EN HTML
-//--------------------------------------
-    document.getElementById("showing").innerHTML = showCard;
+    <div class="col-4">
+    <input type="image" src="${playerHand[1].imagen}" id="CardTwo" class=" carta igual" >
+    </div>
+    <div class="col-4">
+    <input type="image" src="${playerHand[2].imagen}" id="cardThree" class=" carta igual">
+    </div>
+    </div>
+`   
+$('#showing').append(showCard)
 
 
 
@@ -334,8 +325,7 @@ function displayHand() {
     console.log("mano rival :")
     console.log(rivalHand)
 
-    let rivalCards = `
-    
+    $('#rivalCards').append(`    
     <div class="d-flex justify-content-around row"" id="rivalCards">
     <div class="col-4">
         <input type="image" src="${rivalHand[0].imagen}" id="btn" class="btn carta" onclick="">
@@ -349,14 +339,7 @@ function displayHand() {
     </div>
     
     
-    `;
-
-
-
-//--------------------------------------
-//BUSCAR EL ID Y PONER LAS CARTAS EN HTML
-//--------------------------------------
-        document.getElementById("rivalCards").innerHTML = rivalCards;
+    `)
     
 
 
@@ -512,6 +495,10 @@ function displayHand() {
 
 }
 
+
+
+
+
 //modular--
 //cartas.js
 //mazo
@@ -523,10 +510,10 @@ console.log("\n\n\n\n\n\n\n\n\n")
 
 
 function botones() {
-    let btn = document.getElementsByClassName('igual')
-    console.log(btn)
+    let btn = $('.igual')
+    /* console.log(btn) */
     for(let botones of btn) {
-        console.log(botones);
+        /* console.log(botones); */
         botones.addEventListener('click', ()=> {
             selectedCardOne(botones.id)
         })
@@ -538,3 +525,23 @@ function selectedCardOne(id) {
     console.log(id)
 }
 
+
+//-------------------
+//Storage y JSON
+//--------------------
+//session
+/* sessionStorage.setItem('nombreUsuario', prompt("por favor ingrese su nombre"));
+console.log("Nombre del Usuario: ", sessionStorage.getItem('nombreUsuario') ) */
+/* sessionStorage.setItem('edadUsuario', prompt("por favor ingrese su edad"));
+console.log("Edad del Usuario: ", sessionStorage.getItem('edadUsuario') ) */
+
+//usuario
+/* let usuario = document.getElementById("usuario");
+let pUsuario = document.createElement("p");
+pUsuario.innerHTML = `Mano de <b>${sessionStorage.getItem("nombreUsuario")}</b>`;
+usuario.appendChild(pUsuario); */
+
+
+//local
+const allCartasJSON = JSON.stringify(mazo)
+localStorage.setItem("allCartas", allCartasJSON);
