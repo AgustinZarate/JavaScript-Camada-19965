@@ -51,7 +51,7 @@ button:hover {
 }
 
 .carta {
-    width: 155px;
+    width: 140px;
     height: 200px;
 }
 
@@ -61,4 +61,8 @@ button:hover {
 }
 b{ 
     color: red;
+}
+
+.mano {
+    display: none;
 }

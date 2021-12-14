@@ -1,22 +1,24 @@
 
 
 function botones() {
-    let btn = $('.igual')
-    //console.log(btn) // recupera el inner de los nodo con clase "igual" 
-    for(let botones of btn) {
-        //console.log(botones);
-        botones.addEventListener('click', ()=> {
-            selectedCard(botones.id)
+    let cartas = $('.mano')
+    //console.log(cartas) // recupera el inner de los nodo con clase "igual" 
+    for(let carta of cartas) {
+        console.log(carta);
+        $(carta).on('click', ()=> {
+            selectedCard(carta.id)
         })
     }
 }
 
 
-function selectedCard(id) {
+//----------------------------------------------------------//
+//-----------  DESAPARECER CARTAS CON UN EFECTO ------------//
+//----------------------------------------------------------//
 
-    let carta = playerHand[id]
-    console.log("carta selecionada : " + carta)
-/*     let playerHand = [firstCard, secondCard, thirdCard] */
-/*     let iCard = mazo.indexOf();
-    mazo.splice(iCard, 1) */
-}
+function selectedCard(card) {
+    console.log(card)
+    let carta = "#" + card
+    $(carta).slideUp()
+/*     playerHand.splice(carta, 1) */
+} 

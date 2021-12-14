@@ -19,21 +19,29 @@
     console.log(playerHand)
     
 
+//.html() remplaza a innerHTML en JQuery
+$('#showing').html( `    
+<div class="d-flex justify-content-around row" id="playerCards">
+<div class="col-4">
+<input type="image" src="${playerHand[0].imagen}" id="cardOne" class=" carta mano">
+</div>
+<div class="col-4">
+<input type="image" src="${playerHand[1].imagen}" id="CardTwo" class=" carta mano" >
+</div>
+<div class="col-4">
+<input type="image" src="${playerHand[2].imagen}" id="cardThree" class=" carta mano">
+</div>
+</div>
+`   )
 
-    let showCard =  `    
-    <div class="d-flex justify-content-around row" id="playerCards">
-    <div class="col-4">
-    <input type="image" src="${playerHand[0].imagen}" id="cardOne" class=" carta igual">
-    </div>
-    <div class="col-4">
-    <input type="image" src="${playerHand[1].imagen}" id="CardTwo" class=" carta igual" >
-    </div>
-    <div class="col-4">
-    <input type="image" src="${playerHand[2].imagen}" id="cardThree" class=" carta igual">
-    </div>
-    </div>
-`   
-$('#showing').append(showCard)
+
+//-------------------------------------------------------//
+//-----------  APARECER CARTAS CON UN EFECTO ------------//
+//-------------------------------------------------------//
+
+
+$('.mano').show("slow")
+
 
     console.log('primera')
 

@@ -18,7 +18,8 @@ let rivalHand = [rivalFirstCard, rivalSecondCard, rivalThirdCard]
 console.log("mano rival :")
 console.log(rivalHand)
 
-let rivalCards = `    
+let rivalCards = 
+$('#rivalCards').html(`    
 <div class="d-flex justify-content-around row"" id="rivalCards">
 <div class="col-4">
     <input type="image" src="${rivalHand[0].imagen}" id="btn" class="btn carta" onclick="">
@@ -30,8 +31,5 @@ let rivalCards = `
     <input type="image" src="${rivalHand[2].imagen}" id="btn" class="btn carta" onclick="">
     </div>
 </div>
-
-
-`
-$('#rivalCards').append(rivalCards)
+`)
 }
