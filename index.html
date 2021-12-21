@@ -14,50 +14,112 @@
 </head>
 
 <body>
-    <header class="text-center">
-        <h1>Simulador truco</h1>
+    
+    <header class="text-center m-5 d-flex justify-content-center">
+        <h1>Baraja.com</h1> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-play-card" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect transform="rotate(90 12 12)" x="3" y="5" width="18" height="14" rx="2" />
+            <line x1="8" y1="6" x2="8.01" y2="6" />
+            <line x1="16" y1="18" x2="16.01" y2="18" />
+            <path d="M12 16l-3 -4l3 -4l3 4z" />
+          </svg>
     </header>
 
 
     <main>
-        <section>
+        <section class="mb-5">
             <div>
-                <h3>Todas las cartas: </h3>
+                <h3>Introduccion</h3>
+                <hr>
             </div>
-
-            <div class="d-flex row" id="cartasMazo">
-
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab autem dolorum consectetur corrupti rerum doloremque! Temporibus accusantium sed quam, quia enim ipsum incidunt ipsa eius in! Sunt, dolore! Quisquam!
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="img/600x300.png" alt="">
+                </div>
             </div>
+        </section>
+
+
+        <section class="all-cartas mt-5" id="allCartas">
+
+            <h2>Conozcamos las cartas:</h2>
+            <hr>
+                    <h3>Baraja Españolas</h3>
+                    <div class="d-flex flex-wrap" id="barajaEspañola">
+                    </div>
+                    <h3>Baraja inglesa</h3>
+                    <div class="d-flex flex-wrap" id="barajaInglesa">
+                    </div>
         </section>
     </main>
 
+    <div class="d-flex row" id="cartasMazo">
 
-
-
-
-
-    <div class="row">
-        <div class="container col-2">
-            <input type="image" src="img/reverso.png" id="btn" class="carta" onclick="displayHand()">
-        </div>
-        <div class="col-10">
-            <div class="row text-center">
-                <p>mano rival 😺</p>
-                <div id="rivalCards">
-
-                </div>
-            </div>
-            <div class="row text-center">
-                <div id="usuario">
-
-                </div>
-                <div id="showing">
-
-                </div>
-            </div>
-
-        </div>
     </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Truco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">21 Black Jack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Poker</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+
+            <div class="row meza">
+        
+                <div class="col-8">
+                    <div class="row text-center">
+                        <p>mano rival 😺</p>
+                        <div id="rivalCards">
+        
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div id="usuario">
+        
+                        </div>
+                        <div id="showing">
+        
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="container col-2">
+                    <input type="image" src="img/reverso.png" id="btn" class="carta" onclick="displayHand()">
+                </div>
+                <aside class="col-2">
+                    <table>
+                        <th>Puntos</th>
+                        <tr>
+                            <td>Ellos</td>
+                            <td>Nosotos</td>
+                        </tr>
+                        <tr>
+                            <td id="puntosRival" class="puntos"></td>
+                            <td id="puntosPlayer" class="puntos"></td>
+                        </tr>
+        
+                        
+                    </table>
+                </aside>
+            </div>
+        
+        </div>
+      </div>
+
 
 
 
@@ -77,8 +139,9 @@
 
     <script src="simulador-truco/obj-carta.js"></script>
     <script src="simulador-truco/array.js"></script>
+    <script src="simulador-truco/dom.js"></script>
     <script src="simulador-truco/tantos-player.js"></script>
-<!--     <script src="simulador-truco/displayHand.js"></script> -->
+    <script src="simulador-truco/displayHand.js"></script>
     <script src="simulador-truco/displayRival.js"></script>
 <!--     <script src="simulador-truco/manipulacion-carta.js"></script> -->
 
@@ -91,7 +154,6 @@
 
 
     <!-- Script Entrega -->
-<script src="js/agustin-zarate-desafio-complementario-clase-13.js"></script>
 </body>
 
 </html>
