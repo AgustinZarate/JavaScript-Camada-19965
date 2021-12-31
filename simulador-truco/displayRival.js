@@ -2,19 +2,20 @@ function displayRival () {
     let rivalFirstCard = mazo[Math.floor(Math.random() * mazo.length)];
     let iRivalFirstCard = mazo.indexOf(rivalFirstCard);
     mazo.splice(iRivalFirstCard, 1)
+    rivalHand.push(rivalFirstCard)
 
 
     let rivalSecondCard = mazo[Math.floor(Math.random() * mazo.length)];
     let iRivalSecondCard = mazo.indexOf(rivalSecondCard);
     mazo.splice(iRivalSecondCard, 1)
-
+    rivalHand.push(rivalSecondCard)
     
     let rivalThirdCard = mazo[Math.floor(Math.random() * mazo.length)];
     let iRivalThirdCard = mazo.indexOf(rivalThirdCard);
     mazo.splice((iRivalThirdCard), 1)
-
+    rivalHand.push(rivalThirdCard)
 //Array mano del rival
-let rivalHand = [rivalFirstCard, rivalSecondCard, rivalThirdCard]
+/* let rivalHand = [rivalFirstCard, rivalSecondCard, rivalThirdCard] */
 console.log("mano rival :")
 console.log(rivalHand)
 
@@ -32,4 +33,6 @@ $('#rivalCards').html(`
     </div>
 </div>
 `)
+
+tantosRival (rivalFirstCard,rivalSecondCard,rivalThirdCard)
 }

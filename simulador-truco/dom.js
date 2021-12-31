@@ -11,11 +11,3 @@
 /* let preciosOrdenados = preciosCamisetas.sort(function(a, b) {
     return a.precio - b.precio
 }); */
-
-for(const carta of mazo) {
-    $("#barajaEspañola").append(`
-        <div>
-            <img src="${carta.imagen}" class="presentation-card" alt="">
-        </div>
-    `)
-}

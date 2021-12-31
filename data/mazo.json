@@ -1,0 +1,362 @@
+[
+    {
+      "id": 1,
+      "imagen": "../img/1-espada.png",
+      "jerarquia": 1,
+      "numero": 1,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 1
+    },
+    {
+      "id": 2,
+      "imagen": "../img/2-espada.png",
+      "jerarquia": 6,
+      "numero": 2,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 2
+    },
+    {
+      "id": 3,
+      "imagen": "../img/3-espada.png",
+      "jerarquia": 5,
+      "numero": 3,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 3
+    },
+    {
+      "id": 4,
+      "imagen": "../img/4-espada.png",
+      "jerarquia": 14,
+      "numero": 4,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 4
+    },
+    {
+      "id": 5,
+      "imagen": "../img/5-espada.png",
+      "jerarquia": 13,
+      "numero": 5,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 5
+    },
+    {
+      "id": 6,
+      "imagen": "../img/6-espada.png",
+      "jerarquia": 12,
+      "numero": 6,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 6
+    },
+    {
+      "id": 7,
+      "imagen": "../img/7-espada.png",
+      "jerarquia": 3,
+      "numero": 7,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 7
+    },
+    {
+      "id": 8,
+      "imagen": "../img/10-espada.png",
+      "jerarquia": 10,
+      "numero": 10,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 9,
+      "imagen": "../img/11-espada.png",
+      "jerarquia": 9,
+      "numero": 11,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 10,
+      "imagen": "../img/12-espada.png",
+      "jerarquia": 8,
+      "numero": 12,
+      "palo": "espada",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 11,
+      "imagen": "../img/1-basto.png",
+      "jerarquia": 2,
+      "numero": 1,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 1
+    },
+    {
+      "id": 12,
+      "imagen": "../img/2-basto.png",
+      "jerarquia": 6,
+      "numero": 2,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 2
+    },
+    {
+      "id": 13,
+      "imagen": "../img/3-basto.png",
+      "jerarquia": 5,
+      "numero": 3,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 3
+    },
+    {
+      "id": 14,
+      "imagen": "../img/4-basto.png",
+      "jerarquia": 14,
+      "numero": 4,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 4
+    },
+    {
+      "id": 15,
+      "imagen": "../img/5-basto.png",
+      "jerarquia": 13,
+      "numero": 5,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 5
+    },
+    {
+      "id": 16,
+      "imagen": "../img/6-basto.png",
+      "jerarquia": 12,
+      "numero": 6,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 6
+    },
+    {
+      "id": 17,
+      "imagen": "../img/7-basto.png",
+      "jerarquia": 11,
+      "numero": 7,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 7
+    },
+    {
+      "id": 18,
+      "imagen": "../img/10-basto.png",
+      "jerarquia": 10,
+      "numero": 10,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 19,
+      "imagen": "../img/11-basto.png",
+      "jerarquia": 9,
+      "numero": 11,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 20,
+      "imagen": "../img/12-basto.png",
+      "jerarquia": 8,
+      "numero": 12,
+      "palo": "basto",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 21,
+      "imagen": "../img/1-oro.png",
+      "jerarquia": 7,
+      "numero": 1,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 1
+    },
+    {
+      "id": 22,
+      "imagen": "../img/2-oro.png",
+      "jerarquia": 6,
+      "numero": 2,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 2
+    },
+    {
+      "id": 23,
+      "imagen": "../img/3-oro.png",
+      "jerarquia": 5,
+      "numero": 3,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 3
+    },
+    {
+      "id": 24,
+      "imagen": "../img/4-oro.png",
+      "jerarquia": 14,
+      "numero": 4,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 4
+    },
+    {
+      "id": 25,
+      "imagen": "../img/5-oro.png",
+      "jerarquia": 13,
+      "numero": 5,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 5
+    },
+    {
+      "id": 26,
+      "imagen": "../img/6-oro.png",
+      "jerarquia": 12,
+      "numero": 6,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 6
+    },
+    {
+      "id": 27,
+      "imagen": "../img/7-oro.png",
+      "jerarquia": 4,
+      "numero": 7,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 7
+    },
+    {
+      "id": 28,
+      "imagen": "../img/10-oro.png",
+      "jerarquia": 10,
+      "numero": 10,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 29,
+      "imagen": "../img/11-oro.png",
+      "jerarquia": 9,
+      "numero": 11,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 30,
+      "imagen": "../img/12-oro.png",
+      "jerarquia": 8,
+      "numero": 12,
+      "palo": "oro",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 31,
+      "imagen": "../img/1-copa.png",
+      "jerarquia": 7,
+      "numero": 1,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 1
+    },
+    {
+      "id": 32,
+      "imagen": "../img/2-copa.png",
+      "jerarquia": 6,
+      "numero": 2,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 2
+    },
+    {
+      "id": 33,
+      "imagen": "../img/3-copa.png",
+      "jerarquia": 5,
+      "numero": 3,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 3
+    },
+    {
+      "id": 34,
+      "imagen": "../img/4-copa.png",
+      "jerarquia": 14,
+      "numero": 4,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 4
+    },
+    {
+      "id": 35,
+      "imagen": "../img/5-copa.png",
+      "jerarquia": 13,
+      "numero": 5,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 5
+    },
+    {
+      "id": 36,
+      "imagen": "../img/6-copa.png",
+      "jerarquia": 12,
+      "numero": 6,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 6
+    },
+    {
+      "id": 37,
+      "imagen": "../img/7-copa.png",
+      "jerarquia": 11,
+      "numero": 7,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 7
+    },
+    {
+      "id": 38,
+      "imagen": "../img/10-copa.png",
+      "jerarquia": 10,
+      "numero": 10,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 39,
+      "imagen": "../img/11-copa.png",
+      "jerarquia": 11,
+      "numero": 11,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    },
+    {
+      "id": 40,
+      "imagen": "../img/12-copa.png",
+      "jerarquia": 12,
+      "numero": 12,
+      "palo": "copa",
+      "reverso": "../img/reverso.png",
+      "valor": 20
+    }
+  ]

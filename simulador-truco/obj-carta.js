@@ -1,10 +1,10 @@
 class Carta {
 
-    constructor(numero, palo, valor, jerarquia, imagen, reverso) {
+    constructor(numero, palo, envido, jerarquia, imagen, reverso) {
         
         this.numero = numero;
         this.palo = palo;
-        this.valor = valor;
+        this.envido = envido;
         this.jerarquia = jerarquia
         this.imagen = imagen
         this.reverso = reverso

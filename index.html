@@ -49,7 +49,7 @@
 
             <h2>Conozcamos las cartas:</h2>
             <hr>
-                    <h3>Baraja Españolas</h3>
+                    <h3>Baraja Españolas</h3> <button id="españolas">Despeglar cartas</button>
                     <div class="d-flex flex-wrap" id="barajaEspañola">
                     </div>
                     <h3>Baraja inglesa</h3>
@@ -82,7 +82,7 @@
         
                 <div class="col-8">
                     <div class="row text-center">
-                        <p>mano rival 😺</p>
+                        <p>Mano rival 😺</p>
                         <div id="rivalCards">
         
                         </div>
@@ -98,7 +98,7 @@
         
                 </div>
                 <div class="container col-2">
-                    <input type="image" src="img/reverso.png" id="btn" class="carta" onclick="displayHand()">
+                    <input type="image" src="img/reverso.png" id="btn" class="carta" onclick="displayHand(), displayRival()">
                 </div>
                 <aside class="col-2">
                     <table>
@@ -136,14 +136,16 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
-
+    <script src="simulador-truco/json.js"></script>
     <script src="simulador-truco/obj-carta.js"></script>
     <script src="simulador-truco/array.js"></script>
-    <script src="simulador-truco/dom.js"></script>
-    <script src="simulador-truco/tantos-player.js"></script>
+<!--     <script src="simulador-truco/dom.js"></script> -->
+    <script src="simulador-truco/simulador-truco.js"></script>
+    <script src="/simulador-truco/simulador-envido.js"></script>
+    <script src="simulador-truco/manipulacion-carta.js"></script>
     <script src="simulador-truco/displayHand.js"></script>
     <script src="simulador-truco/displayRival.js"></script>
-<!--     <script src="simulador-truco/manipulacion-carta.js"></script> -->
+
 
 
 <!--     <script src="./simulador-truco/"></script> -->
