@@ -45,8 +45,25 @@ function positionArray(i) {
     console.log(rivalCarta)
     $(rivalCarta).slideUp()
     console.log("array mesa:")
-    console.log(mesa)
+    console.log(mesa)   
+
+
 
 }
 
-let rivalCarta = ""
+
+
+
+
+
+//el 1 es el numero mas alto en jerarquia (ancho de espada)
+function truco(jugador, rival) {
+    if (jugador.jerarquia < rival.jerarquia) {
+        console.log("gana jugador")
+    } else if (jugador.jerarquia === rival.jerarquia) {
+        console.log("emapte")
+    } else if (jugador.jerarquia > rival.jerarquia) {
+        console.log("gana el rival")
+    }
+
+}

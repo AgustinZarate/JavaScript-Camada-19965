@@ -10,6 +10,7 @@ function botones() {
             positionArray(carta.id)
         })
     }
+    
 }
 
 

@@ -34,5 +34,5 @@ $('#rivalCards').html(`
 </div>
 `)
 
-tantosRival (rivalFirstCard,rivalSecondCard,rivalThirdCard)
+tantosEnvido (rivalFirstCard,rivalSecondCard,rivalThirdCard)
 }
