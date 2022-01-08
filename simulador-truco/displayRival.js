@@ -23,13 +23,13 @@ let rivalCards =
 $('#rivalCards').html(`    
 <div class="d-flex justify-content-around row"" id="rivalCards">
 <div class="col-4">
-    <input type="image" src="${rivalHand[0].imagen}" id="btn" class="btn carta" onclick="">
+    <input type="image" src="${rivalHand[0].imagen}" id="${rivalHand[0].id}" class="btn carta" onclick="">
     </div>
     <div class="col-4">
-    <input type="image" src="${rivalHand[1].imagen}" id="btn" class="btn carta" onclick="">
+    <input type="image" src="${rivalHand[1].imagen}" id="${rivalHand[1].id}" class="btn carta" onclick="">
     </div>
     <div class="col-4">
-    <input type="image" src="${rivalHand[2].imagen}" id="btn" class="btn carta" onclick="">
+    <input type="image" src="${rivalHand[2].imagen}" id="${rivalHand[2].id}" class="btn carta" onclick="">
     </div>
 </div>
 `)

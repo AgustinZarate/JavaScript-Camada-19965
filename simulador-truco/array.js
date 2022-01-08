@@ -42,8 +42,8 @@ mazo.push(new Carta(5, "copa", 5, 13, "../img/5-copa.png", "../img/reverso.png")
 mazo.push(new Carta(6, "copa", 6, 12, "../img/6-copa.png", "../img/reverso.png"))
 mazo.push(new Carta(7, "copa", 7, 11, "../img/7-copa.png", "../img/reverso.png"))
 mazo.push(new Carta(10, "copa", 20, 10, "../img/10-copa.png", "../img/reverso.png"))
-mazo.push(new Carta(11, "copa", 20, 11, "../img/11-copa.png", "../img/reverso.png"))
-mazo.push(new Carta(12, "copa", 20, 12, "../img/12-copa.png", "../img/reverso.png"))
+mazo.push(new Carta(11, "copa", 20, 9, "../img/11-copa.png", "../img/reverso.png"))
+mazo.push(new Carta(12, "copa", 20, 8, "../img/12-copa.png", "../img/reverso.png"))
 
 
 playerHand = []

@@ -25,16 +25,28 @@ function positionArray(i) {
 
     console.log("carta seleccionada: ")
     console.log(cardSelected)
-    console.log("jerarquia: ")
-    console.log(playerHand[i].jerarquia)
+/*     console.log("jerarquia: ")
+    console.log(playerHand[i].jerarquia) */
 
     console.log("\n\n\n\n\n")
 
-    console.log("carta RIVAL: ")
+    console.log("(rivalCard) carta RIVAL: ")
     console.log(rivalCard)
-    console.log("jerarquia RIVAL: ")
+    console.log("(rivalCard.jerarquia) jerarquia RIVAL: ")
     console.log(rivalCard.jerarquia)
+
+    
     mesa.push(cardSelected)
+    mesa.push(rivalCard)
+
+
+    let rivalCarta = "#" + rivalCard.id
+    console.log("i rival:")
+    console.log(rivalCarta)
+    $(rivalCarta).slideUp()
     console.log("array mesa:")
     console.log(mesa)
+
 }
+
+let rivalCarta = ""

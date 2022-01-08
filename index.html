@@ -14,111 +14,209 @@
 </head>
 
 <body>
-    
+
     <header class="text-center m-5 d-flex justify-content-center">
-        <h1>Baraja.com</h1> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-play-card" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-play-card" width="44" height="44"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <rect transform="rotate(90 12 12)" x="3" y="5" width="18" height="14" rx="2" />
             <line x1="8" y1="6" x2="8.01" y2="6" />
             <line x1="16" y1="18" x2="16.01" y2="18" />
             <path d="M12 16l-3 -4l3 -4l3 4z" />
-          </svg>
+        </svg>
+        <h1>Baraja.com</h1>
     </header>
 
 
     <main>
+
+
+        <!-- Presentacion -->
         <section class="mb-5">
-            <div>
-                <h3>Introduccion</h3>
-                <hr>
-            </div>
             <div class="row">
-                <div class="col-6">
+                <div class="col-6 container d-flex flex-column justify-content-around">
+                    <h2>
+                        ¡Bienvenido a baraja.com!
+                    </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab autem dolorum consectetur corrupti rerum doloremque! Temporibus accusantium sed quam, quia enim ipsum incidunt ipsa eius in! Sunt, dolore! Quisquam!
+                        Aprenderas lo basico para iniciarte en el celebre juego del <br> <b>Truco Argentino</b>
+                    </p>
+                    <p class="p-3">
+                        Esperamos que te sea de gusto jugar con nosotros, para poder jugar con tus amigos y ser el mejor
+                        <br><span class="span-gris">*Indispensable preparar <b>mate</b> para una mejor
+                            experiencia</span>
                     </p>
                 </div>
                 <div class="col-6">
-                    <img src="img/600x300.png" alt="">
+                    <img src="img/baraja.png" class="w-100" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cartas -->
+        <section class="all-cartas mt-5 text-center" id="allCartas">
+
+            <h2>Conozcamos las cartas</h2>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3>Baraja Españolas</h3>
+                        <button class="btn btn-success" id="españolas">Despeglar</button>
+
+                    </div>
+                    <div id="descritionEspañolas"></div>
+
+
+                    <div class="d-flex justify-content-center align-items-center flex-wrap p-4" id="barajaEspañola">
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3>Baraja inglesa</h3>
+                        <button class="btn btn-success" id="españolas" disabled>Despeglar</button>
+                    </div>
+
+                    <div class="d-flex flex-wrap" id="barajaInglesa">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Jerarquia de las cartas -->
+        <section class="container">
+            <div class="row">
+                <div class="col-12 text-center container">
+                    <h3>Jerarquia de las cartas</h3>
+                    <hr>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h3>Baraja Españolas</h3>
+                        <button class="btn btn-warning" id="jerarquias">Despeglar</button>
+                    </div>
+
+                    <div id="cartasJerarquia" class="row">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Envido y Truco-->
+        <section class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h3>Tipos de juegos</h3>
+                    <hr>
+                </div>
+                
+                <div class="col-6 text-center" id="envido">
+                    <button class="btn btn-info">
+                        <h3>Envido</h3>
+                    </button>
+                </div>
+                <div class="col-6 text-center" id="truco">
+                    <button class="btn btn-info">
+                        <h3>Truco</h3>
+                    </button>
+                    <div>
+                        <h3>El truco siempre se canta despues del envido</h3>
+                        <ol>
+                            <td>Puntos en juego</td>
+                            <li><b class="b-azul">Truco:</b> 2pts</li>
+                            <li><b class="b-azul">RE truco:</b> 3pts</li>
+                            <li><b class="b-azul">Vale 4:</b> 4pts</li>
+                        </ol>
+                        <p>El jugador que cante <b class="b-azul">truco</b> poner en juego los puntos.<br>  Al decir  <b class="b-azul">No Quiero</b> se cierra el juego y el rival ganas los puntos <b class="b-azul">-1</b>
+                            <p><span class="span-gris">Ej: Truco no querido = 1pt / Re Truco no querido = 2pts / Vale 4 no querido = 3pts</span> </p>
+                        </p>
+                        <p>Al decir <b class="b-azul">Quiero</b> se juegan los tantos al mejor de 3 cartas</p>
+                        <p><span class="b-gris">Ej: Judaor gana la primer mano / Rival gana la segunda mano / Jugador gana la tercer mano. <br> Jugador se lleva los puntos</span></p>
+                        <p>Solamente la persona a la que le cantan puede elevarlo el juego</p>
+                        <p><span class="span-gris">Ej: Yo: ¡Truco! / Rival: ¡Quiero RE TRUCO! / Yo: ¡Quiero VALE 4!</span> </p>
+                        <p>A diferencia del <b class="b-rojo">Envido</b> no se pueden adelantar juegos. Primero se canta truco y el rival decide si elevar el juego o no.</p> 
+                    </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="all-cartas mt-5" id="allCartas">
+        <!-- Mesa de juego -->
+        <section>
+            <div class="d-flex row" id="cartasMazo">
 
-            <h2>Conozcamos las cartas:</h2>
-            <hr>
-                    <h3>Baraja Españolas</h3> <button id="españolas">Despeglar cartas</button>
-                    <div class="d-flex flex-wrap" id="barajaEspañola">
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="#">Truco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">21 Black Jack</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Poker</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+
+                    <div class="row meza">
+
+                        <div class="col-8">
+                            <div class="row text-center">
+                                <p>Mano rival ??</p>
+                                <div id="rivalCards">
+
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div id="usuario">
+
+                                </div>
+                                <div id="showing">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container col-2">
+                            <input type="image" src="img/reverso.png" id="btn" class="carta"
+                                onclick="displayHand(), displayRival()">
+                        </div>
+                        <aside class="col-2">
+                            <table>
+                                <th>Puntos</th>
+                                <tr>
+                                    <td>Ellos</td>
+                                    <td>Nosotos</td>
+                                </tr>
+                                <tr>
+                                    <td id="puntosRival" class="puntos"></td>
+                                    <td id="puntosPlayer" class="puntos"></td>
+                                </tr>
+
+
+                            </table>
+                        </aside>
                     </div>
-                    <h3>Baraja inglesa</h3>
-                    <div class="d-flex flex-wrap" id="barajaInglesa">
-                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 
-    <div class="d-flex row" id="cartasMazo">
 
-    </div>
 
-    <div class="card text-center">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="true" href="#">Truco</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">21 Black Jack</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Poker</a>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body">
 
-            <div class="row meza">
-        
-                <div class="col-8">
-                    <div class="row text-center">
-                        <p>Mano rival 😺</p>
-                        <div id="rivalCards">
-        
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div id="usuario">
-        
-                        </div>
-                        <div id="showing">
-        
-                        </div>
-                    </div>
-        
-                </div>
-                <div class="container col-2">
-                    <input type="image" src="img/reverso.png" id="btn" class="carta" onclick="displayHand(), displayRival()">
-                </div>
-                <aside class="col-2">
-                    <table>
-                        <th>Puntos</th>
-                        <tr>
-                            <td>Ellos</td>
-                            <td>Nosotos</td>
-                        </tr>
-                        <tr>
-                            <td id="puntosRival" class="puntos"></td>
-                            <td id="puntosPlayer" class="puntos"></td>
-                        </tr>
-        
-                        
-                    </table>
-                </aside>
-            </div>
-        
-        </div>
-      </div>
+
+
+
+
+
 
 
 
@@ -139,7 +237,7 @@
     <script src="simulador-truco/json.js"></script>
     <script src="simulador-truco/obj-carta.js"></script>
     <script src="simulador-truco/array.js"></script>
-<!--     <script src="simulador-truco/dom.js"></script> -->
+    <script src="simulador-truco/dom.js"></script>
     <script src="simulador-truco/simulador-truco.js"></script>
     <script src="/simulador-truco/simulador-envido.js"></script>
     <script src="simulador-truco/manipulacion-carta.js"></script>
@@ -148,11 +246,11 @@
 
 
 
-<!--     <script src="./simulador-truco/"></script> -->
-<!--     <script src="simulador-envido.js"></script>
+    <!--     <script src="./simulador-truco/"></script> -->
+    <!--     <script src="simulador-envido.js"></script>
     <script src="manipulacion-carta.js"></script>
     <script src="simulador-truco.js".js"></script> -->
-    
+
 
 
     <!-- Script Entrega -->

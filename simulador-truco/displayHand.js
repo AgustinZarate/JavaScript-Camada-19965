@@ -26,13 +26,13 @@
 $('#showing').html( `    
 <div class="d-flex justify-content-around row" id="playerCards">
 <div class="col-4">
-<input type="image" src="${playerHand[0].imagen}" id="0" class=" carta mano">
+<input type="image" src="${playerHand[0].imagen}" id="${playerHand[0].id}" class=" carta mano">
 </div>
 <div class="col-4">
-<input type="image" src="${playerHand[1].imagen}" id="1" class=" carta mano" >
+<input type="image" src="${playerHand[1].imagen}" id="${playerHand[1].id}" class=" carta mano" >
 </div>
 <div class="col-4">
-<input type="image" src="${playerHand[2].imagen}" id="2" class=" carta mano">
+<input type="image" src="${playerHand[2].imagen}" id="${playerHand[2].id}" class=" carta mano">
 </div>
 </div>
 `   )

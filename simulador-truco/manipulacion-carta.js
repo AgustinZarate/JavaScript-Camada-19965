@@ -21,8 +21,6 @@ function selectedCard(card) {
     console.log(card)
     let carta = "#" + card
     $(carta).slideUp()
-/*     playerHand.splice(0, 1) */
-/*     console.log(playerHand) */
 } 
 
 //numero aleatorio
