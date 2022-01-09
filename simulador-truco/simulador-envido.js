@@ -191,15 +191,13 @@ function cantarEnvido() {
         Tantos Player  ${envido[0]} 
         tantos rival ${envido[1]}
         gana player por ser mano`)
-        sumarPuntosPlayer(2)
+        $("#puntosPlayer").text(sumarPuntosPlayer(2))
     }
     if (envido[0] > envido[1]) {
         alert(`  Player gana con  ${envido[0]}, sobre los ${envido[1]} del rival `)
-        sumarPuntosPlayer(2)
+        $("#puntosPlayer").text(sumarPuntosPlayer(2))
     } else if (envido[0] < envido[1]) {
         alert(`  Rival gana con  ${envido[1]}, sobre los ${envido[0]} del Player `)
-        sumarPuntosRival(2)
+        $("#puntosRival").text(sumarPuntosRival(2))
     }
-
-
 }

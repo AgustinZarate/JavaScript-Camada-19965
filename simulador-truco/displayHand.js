@@ -38,7 +38,7 @@ $('#showing').html( `
 
 <div class="d-flex justify-content-around row" id="playerCards">
 <div class="col-6">
-<button id="truco">Truco</button>
+<button id="truco" onclick="btnTruco()">Truco</button>
 </div>
 <div class="col-6">
 <button id="envido" onclick="cantarEnvido()">Envido</button>
