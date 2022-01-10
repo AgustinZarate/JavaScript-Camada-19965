@@ -33,6 +33,7 @@ function positionArray(i) {
     
     mesa.push(cardSelected)
     mesa.push(rivalCard)
+    cartasEnMesaRival(rivalCard)
 
 
     let rivalCarta = "#" + rivalCard.id
@@ -41,7 +42,6 @@ function positionArray(i) {
     $(rivalCarta).slideUp()
     console.log("array mesa:")
     console.log(mesa)   
-
     jugada(cardSelected, rivalCard)
 
 
@@ -159,4 +159,6 @@ function reiniciarTruco() {
     truco = false
     console.log("let Truco es: " + truco)
 }
+
+
 

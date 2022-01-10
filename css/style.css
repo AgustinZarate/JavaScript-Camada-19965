@@ -15,9 +15,19 @@ p span {
     color: rgba(0, 0, 0, 0.527);
 }
 
+.span-celeste {
+    font-size: 1.5rem ;
+    color: rgb(7, 237, 253);
+}
 .span-gris {
     font-size: 1vw ;
     color: rgba(0, 0, 0, 0.527);
+}
+
+.span-rojo {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: rgba(219, 245, 68, 0.842);
 }
 .row {
     --bs-gutter-x: 0;
@@ -99,6 +109,10 @@ b{
     color: white;
     background-color: darkgreen;
 }
+.carta-mesa {
+    width: 80px;
+    height: 105px;
+}
 
 td {
     padding: 1rem;
@@ -126,3 +140,10 @@ td {
     display: none;
 }
 
+.toogle-3 {
+    display: none;
+}
+
+.toogle-4 {
+    display: none;
+}

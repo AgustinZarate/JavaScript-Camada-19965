@@ -47,6 +47,14 @@
                         <br><span class="span-gris">*Indispensable preparar <b>mate</b> para una mejor
                             experiencia</span>
                     </p>
+                    <div class="d-flex align-items-center justify-content-around">
+                        <label class="form-label">
+                            Ingresa tu nombre:
+                        </label>
+                        <input class="form-control" style="max-height: 2.5rem; width: 40%;" type="text" id="from_name"></input>
+                        <button id="registrarse" type="button" class="btn btn-success" onclick="btnRegistrarse()">Registrarse</button>
+                    </div>
+
                 </div>
                 <div class="col-6">
                     <img src="img/baraja.png" class="w-100" alt="">
@@ -101,39 +109,31 @@
                     <h3>Tipos de juegos</h3>
                     <hr>
                 </div>
-                
-                <div class="col-6 text-center" id="envido">
-                    <button class="btn btn-info">
-                        <h3>Envido</h3>
-                    </button>
-                </div>
-                <div class="col-6 text-center" id="truco">
-                    <button class="btn btn-info">
-                        <h3>Truco</h3>
-                    </button>
-                    <div>
-                        <h3>El truco siempre se canta despues del envido</h3>
-                        <ol>
-                            <td>Puntos en juego</td>
-                            <li><b class="b-azul">Truco:</b> 2pts</li>
-                            <li><b class="b-azul">RE truco:</b> 3pts</li>
-                            <li><b class="b-azul">Vale 4:</b> 4pts</li>
-                        </ol>
-                        <p>El jugador que cante <b class="b-azul">truco</b> poner en juego los puntos.<br>  Al decir  <b class="b-azul">No Quiero</b> se cierra el juego y el rival ganas los puntos <b class="b-azul">-1</b>
-                            <p><span class="span-gris">Ej: Truco no querido = 1pt / Re Truco no querido = 2pts / Vale 4 no querido = 3pts</span> </p>
-                        </p>
-                        <p>Al decir <b class="b-azul">Quiero</b> se juegan los tantos al mejor de 3 cartas</p>
-                        <p><span class="b-gris">Ej: Judaor gana la primer mano / Rival gana la segunda mano / Jugador gana la tercer mano. <br> Jugador se lleva los puntos</span></p>
-                        <p>Solamente la persona a la que le cantan puede elevarlo el juego</p>
-                        <p><span class="span-gris">Ej: Yo: ¡Truco! / Rival: ¡Quiero RE TRUCO! / Yo: ¡Quiero VALE 4!</span> </p>
-                        <p>A diferencia del <b class="b-rojo">Envido</b> no se pueden adelantar juegos. Primero se canta truco y el rival decide si elevar el juego o no.</p> 
+                <div class="row">
+
+    
+                    <div class="col-6 text-center" id="reglasTruco">
+                        <button class="btn btn-info" id="truco">
+                            <h3>Truco</h3>
+                        </button>
+                        <hr>
+    
                     </div>
+                    <div class="col-6 text-center" id="reglasEnvido">
+                        <button class="btn btn-info" id="envido">
+                            <h3>Envido</h3>
+                        </button>
+                        <hr>
                 </div>
+
             </div>
         </section>
 
 
         <!-- Mesa de juego -->
+        <div class="text-center"><h3>Ahora que conocemos las reglas, juguemos un poco</h3>
+        <p>Presiona el maso para empezar, al termino de cada mano vuelve a presionar el maso para repartir</p>
+        </div>
         <section id="mesaJuego">
             <div class="d-flex row" id="cartasMazo">
 
@@ -153,42 +153,50 @@
 
                         <div class="col-8">
                             <div class="row text-center">
-                                <p>Mano rival ??</p>
+                                <p>Mano rival <span class="span-celeste"> Estanislao</span></p>
                                 <div id="rivalCards">
 
                                 </div>
+                            </div>
+                            <div class="row d-flex justify-content-center"  id="mesaRival">
+
+                            </div>
+                            <div class="row d-flex justify-content-center" id="mesaJugador">
+                                
                             </div>
                             <div class="row text-center">
                                 <div id="usuario">
 
                                 </div>
                                 <div id="showing">
+                                
 
                                 </div>
                             </div>
 
                         </div>
-                        <div class="container d-flex flex-column justify-content-center col-2">
+                        <div  class="container d-flex flex-column justify-content-center align-items-center col-2">
                             <input type="image" src="img/reverso.png" id="btn" class="maso"
                                 onclick="displayHand(mazo), displayRival(mazo)">
+                                <div id="juegos">
+
+                                </div>
+                                <table>
+                                    <th>Puntos</th>
+                                    <tr>
+                                        <td>Estanislao</td>
+                                        <td id="nombre" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="puntosRival" class="puntos">
+    
+                                        </td>
+                                        <td id="puntosPlayer" class="puntos"></td>
+                                    </tr>
+    
+    
+                                </table>
                         </div>
-                        <aside class="col-2">
-                            <table>
-                                <th>Puntos</th>
-                                <tr>
-                                    <td>Ellos</td>
-                                    <td>Nosotos</td>
-                                </tr>
-                                <tr>
-                                    <td id="puntosRival" class="puntos">
-
-                                    </td>
-                                    <td id="puntosPlayer" class="puntos"></td>
-                                </tr>
-
-
-                            </table>
-                        </aside>
                     </div>
 
                 </div>
@@ -225,13 +233,16 @@
     <script src="simulador-truco/obj-carta.js"></script>
     <script src="simulador-truco/array.js"></script>
     <script src="simulador-truco/dom.js"></script>
+    <script src="simulador-truco/reglasTrucoEnvido.js"></script>
     <script src="simulador-truco/puntos.js"></script>
     <script src="simulador-truco/localStorage.js"></script>
+    <script src="simulador-truco/cartasMesa.js"></script>
+    <script src="simulador-truco/displayHand.js"></script>
+    <script src="simulador-truco/displayRival.js"></script>
     <script src="simulador-truco/simulador-truco.js"></script>
     <script src="/simulador-truco/simulador-envido.js"></script>
     <script src="simulador-truco/manipulacion-carta.js"></script>
-    <script src="simulador-truco/displayHand.js"></script>
-    <script src="simulador-truco/displayRival.js"></script>
+
 
 </body>
 

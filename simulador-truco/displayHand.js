@@ -36,16 +36,17 @@ $('#showing').html( `
 </div>
 </div>
 
-<div class="d-flex justify-content-around row" id="playerCards">
+
+`   )
+
+$('#juegos').html(`
 <div class="col-6">
 <button id="truco" class="desaparecer" onclick="btnTruco()">Truco</button>
 </div>
 <div class="col-6">
 <button id="envido" class="desaparecer" onclick="cantarEnvido()">Envido</button>
 </div>
-</div>
-`   )
-
+`)
 
 //-------------------------------------------------------//
 //-----------  APARECER CARTAS CON UN EFECTO ------------//

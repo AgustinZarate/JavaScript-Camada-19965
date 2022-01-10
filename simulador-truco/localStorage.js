@@ -29,5 +29,21 @@ function termimarPartida () {
         usarLocalStorage()
     }
     $('.desaparecer').remove()
+    $('#mesaJugador').html.remove()
+    $('#mesaRival').html.remove()
 }
 
+
+function btnRegistrarse() {
+    let usuario = document.getElementById('from_name').value
+    localStorage.setItem('nombreUsuario', usuario)
+    let nombreUsuario = localStorage.getItem('nombreUsuario')
+    alert("Bienvenido " + nombreUsuario + " ¡Gracias por registrarte!")
+
+    }
+    let nombreUsuario = localStorage.getItem('nombreUsuario')
+    $('#usuario').append(`
+    <p><span class="span-rojo">${nombreUsuario}</span> esta es tu mano</p>
+`)
+
+$('#nombre').text(`${nombreUsuario}`)
