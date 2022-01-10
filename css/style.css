@@ -6,6 +6,41 @@
     font-family: 'Alice';
 }
 
+.navbar {
+    color: white !important;
+    background-color: #4d6688 !important;
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-collapse {
+    flex-grow: unset;
+}
+.nav-link {
+    color: white !important;
+}
+
+.presentacion {
+    padding: 5rem;
+    background-image: url('../img/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.texto-presentacion {
+    border-radius: 25px;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+a {
+    margin: 0.5rem;
+}
+a:hover {
+    color: #4d6688 !important;
+    background-color: white;
+}
+
 p {
     font-size: 1.5vw;
 }
@@ -146,4 +181,31 @@ td {
 
 .toogle-4 {
     display: none;
+}
+
+table {
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #4d6688;
+}
+tr {
+    border: 1px solid white;
+}
+
+#reglas {
+    padding: 1rem;
+    background-color: #4d6688b6;
+    color: white;
+}
+
+#jerarquias {
+    padding: 1rem;
+    background-color: #4d6688b6;
+    color: white;
+}
+
+#allCartas {
+    padding: 1rem;
+    background-color: #4d6688b6;
+    color: white;
 }

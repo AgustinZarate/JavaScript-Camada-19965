@@ -1,6 +1,3 @@
-/* localStorage.getItem('puntosPlayer', 0)
-localStorage.getItem('puntosRival', 0)
- */
 let puntosPlayer = 0
 let puntosRival = 0
 localStorage.setItem('puntosPlayer',JSON.stringify(puntosPlayer))

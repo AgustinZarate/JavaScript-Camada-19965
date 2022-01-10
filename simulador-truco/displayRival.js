@@ -14,12 +14,6 @@ function displayRival () {
     let iRivalThirdCard = mazo.indexOf(rivalThirdCard);
     mazo.splice((iRivalThirdCard), 1)
     rivalHand.push(rivalThirdCard)
-//Array mano del rival
-/* let rivalHand = [rivalFirstCard, rivalSecondCard, rivalThirdCard] */
-console.log("mano rival :")
-console.log(rivalHand)
-
-let rivalCards = 
 $('#rivalCards').html(`    
 <div class="d-flex justify-content-around row"" id="rivalCards">
 <div class="col-4">

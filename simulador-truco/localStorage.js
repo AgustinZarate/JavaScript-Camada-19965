@@ -29,8 +29,7 @@ function termimarPartida () {
         usarLocalStorage()
     }
     $('.desaparecer').remove()
-    $('#mesaJugador').html.remove()
-    $('#mesaRival').html.remove()
+    $('.remove').remove()
 }
 
 

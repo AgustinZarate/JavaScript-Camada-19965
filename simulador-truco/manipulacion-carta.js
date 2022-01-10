@@ -1,10 +1,6 @@
-
-
 function botones() {
     let cartas = $('.mano')
-    //console.log(cartas) // recupera el inner de los nodo con clase "igual" 
     for(let carta of cartas) {
-/*         console.log(carta); */
         $(carta).on('click', ()=> {
             selectedCard(carta.id)
             positionArray(carta.id)
@@ -12,11 +8,6 @@ function botones() {
     }
     
 }
-
-
-//----------------------------------------------------------//
-//-----------  DESAPARECER CARTAS CON UN EFECTO ------------//
-//----------------------------------------------------------//
 
 function selectedCard(card) {
     console.log(card)

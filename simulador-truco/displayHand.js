@@ -1,28 +1,19 @@
     function displayHand() {
         let firstCard = mazo[Math.floor(Math.random() * mazo.length)];
-        let iFirstCard = mazo.indexOf(firstCard); //busca el nuevo indice para que no se repita la carta
+        let iFirstCard = mazo.indexOf(firstCard);
         mazo.splice(iFirstCard, 1)
         playerHand.push(firstCard)
-    
     
         let secondCard = mazo[Math.floor(Math.random() * mazo.length)];
         let iSecondCard = mazo.indexOf(secondCard);
         mazo.splice(iSecondCard, 1)
         playerHand.push(secondCard)
     
-    
         let thirdCard = mazo[Math.floor(Math.random() * mazo.length)];
         let iThirdCard = mazo.indexOf(thirdCard);
         mazo.splice((iThirdCard), 1)
         playerHand.push(thirdCard)
     
-    //Array mano del jugador
-/*     let playerHand = [firstCard, secondCard, thirdCard] */
-    console.log("mano jugador :")
-    console.log(playerHand)
-    
-
-//.html() remplaza a innerHTML en JQuery
 $('#showing').html( `    
 <div class="d-flex justify-content-around row" id="playerCards">
 <div class="col-4">
@@ -35,8 +26,6 @@ $('#showing').html( `
 <input type="image" src="${playerHand[2].imagen}" id="2" class=" carta mano">
 </div>
 </div>
-
-
 `   )
 
 $('#juegos').html(`
@@ -48,18 +37,8 @@ $('#juegos').html(`
 </div>
 `)
 
-//-------------------------------------------------------//
-//-----------  APARECER CARTAS CON UN EFECTO ------------//
-//-------------------------------------------------------//
-
-
 $('.mano').show("slow")
 
-
-    console.log('primera')
-
-
-    //tantos del envido
     tantosEnvido (firstCard, secondCard, thirdCard)
     botones()
     }

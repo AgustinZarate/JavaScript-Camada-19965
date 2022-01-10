@@ -1,17 +1,3 @@
-/* const preciosCamisetas = camisetas.filter(function (camiseta) {   //-----------Se hace un array con filter para capturar los objetos----------//
-    return camiseta.precio > 0
-
-}); */ 
-
-//------------------------------------------------------//  //------- SIRVE PARA ORDENAR LOS ARRAYS SEGUN SU "UNICODE"-----//
-//-------------------- METODO .SORT -------------------//   //------- CON LOS N° Y OBJETOS SE DEBE DE USAR UNA FUNCION ----//
-//----------------------------------------------------//   //------ let numeros = [5, 1, 20, 65, 10]    |     let numerosOrdenados = numeros.sort(function(a, b) {return a-b}); ---//
-
-
-/* let preciosOrdenados = preciosCamisetas.sort(function(a, b) {
-    return a.precio - b.precio
-}); */
-
 const jerarquiasMazo = mazo.filter(function (carta) {
     return carta.jerarquia > 0
 });
@@ -19,8 +5,6 @@ const jerarquiasMazo = mazo.filter(function (carta) {
 let cartasOrdenadasJerarquia = jerarquiasMazo.sort(function(a, b) {
     return a.jerarquia - b.jerarquia
 });
-console.log("Ordenadas:");
-console.log(cartasOrdenadasJerarquia);
 
 $("#cartasJerarquia").append(`
 <div class="toogle-2">
