@@ -8,14 +8,14 @@ console.log (mazo)
 console.log("\n\n\n\n\n\n\n\n\n")
 
 let truco = false
-
-
 //al presionar un input (manipulacion de carta -funcion Botones-)
 //capturar un objeto
 function positionArray(i) {
     console.log("\n\n\n\n\n")
     console.log("------SIMULADOR TRUCO--------")
     let number = numeros[Math.floor(Math.random() * numeros.length)];
+    console.log("----- ESTE ES EL NUMERO AL AZAR -----------")
+    console.log(number)
     let iNumber = numeros.indexOf(number);
     numeros.splice(iNumber, 1)
     
@@ -24,15 +24,11 @@ function positionArray(i) {
 
     console.log("carta seleccionada: ")
     console.log(cardSelected)
-/*     console.log("jerarquia: ")
-    console.log(playerHand[i].jerarquia) */
-
     console.log("\n\n\n\n\n")
-
     console.log("(rivalCard) carta RIVAL: ")
     console.log(rivalCard)
-    console.log("(rivalCard.jerarquia) jerarquia RIVAL: ")
-    console.log(rivalCard.jerarquia)
+/*     console.log("(rivalCard.jerarquia) jerarquia RIVAL: ")
+    console.log(rivalCard.jerarquia) */
 
     
     mesa.push(cardSelected)
@@ -71,6 +67,8 @@ function jugada(jugador, rival) {
         puntosRivalTruco += 1
         console.log(puntosRivalTruco)
     }
+    mazo.push(jugador)
+    mazo.push(rival)
     ganadorTruco()
 }
 
@@ -79,37 +77,86 @@ function ganadorTruco(){
         console.log("gano jugador PARTIDA")
         if (truco) {
             
-            $("#puntosPlayer").text(sumarPuntosPlayer(2))
+            sumarPuntosPlayer(2)
             alert("Ganaste")
-            setTimeout(() => {
-                location.reload()
-            }, 2000);
-           
+            playerHand = []
+            rivalHand = []
+            envido = []
+            numeros = [0,1,2]
+            puntosPlayerTruco = 0
+            puntosRivalTruco = 0
+            $('.carta').slideUp()
+            usarLocalStorage()
+            termimarPartida ()
+            reiniciarTruco()
+            reiniciarEnvido()
+        
         } else {
             
-            $("#puntosPlayer").text(sumarPuntosPlayer(1))
+            sumarPuntosPlayer(1)
             alert("Ganaste")
-            setTimeout(() => {
-                location.reload()
-            }, 2000);
+            playerHand = []
+            rivalHand = []
+            envido = []
+            numeros = [0,1,2]
+            puntosPlayerTruco = 0
+            puntosRivalTruco = 0
+            $('.carta').slideUp()
+            usarLocalStorage()
+            termimarPartida ()
+            reiniciarTruco()
+            reiniciarEnvido()
         }
     } else if (puntosRivalTruco == 2 ) {
         if (truco) {
-            $("#puntosRival").text(sumarPuntosRival(2))
+            sumarPuntosRival(2)
             alert("Gano el rival")
-            setTimeout(() => {
+            /* setTimeout(() => {
                 location.reload()
-            }, 2000);
+            }, 2000); */
+            playerHand = []
+            rivalHand = []
+            envido = []
+            numeros = [0,1,2]
+            puntosPlayerTruco = 0
+            puntosRivalTruco = 0
+            $('.carta').slideUp()
+            usarLocalStorage()
+            termimarPartida ()
+            reiniciarTruco()
+            reiniciarEnvido()
         } else {
-            $("#puntosRival").text(sumarPuntosRival(1))
+            sumarPuntosRival(1)
             alert("Gano el rival")
-            setTimeout(() => {
+            /* setTimeout(() => {
                 location.reload()
-            }, 2000);
+            }, 2000); */
+            playerHand = []
+            rivalHand = []
+            envido = []
+            numeros = [0,1,2]
+            puntosPlayerTruco = 0
+            puntosRivalTruco = 0
+            $('.carta').slideUp()
+            usarLocalStorage()
+            termimarPartida ()
+            reiniciarTruco()
+            reiniciarEnvido()
         }
     }
 }
 
 function btnTruco() {
-    truco = true
+    if (truco === false) {
+        truco = true
+        console.log("let Truco es: " + truco)
+    }else{
+        alert("truco ya a sido cantado")
+    }
+
 }
+function reiniciarTruco() {
+    truco = false
+    console.log("let Truco es: " + truco)
+}
+

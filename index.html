@@ -60,7 +60,7 @@
             <h2>Conozcamos las cartas</h2>
             <hr>
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <div class="d-flex justify-content-center align-items-center">
                         <h3>Baraja Españolas</h3>
                         <button class="btn btn-success" id="españolas">Despeglar</button>
@@ -71,15 +71,6 @@
 
                     <div class="d-flex justify-content-center align-items-center flex-wrap p-4" id="barajaEspañola">
 
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <h3>Baraja inglesa</h3>
-                        <button class="btn btn-success" id="españolas" disabled>Despeglar</button>
-                    </div>
-
-                    <div class="d-flex flex-wrap" id="barajaInglesa">
                     </div>
                 </div>
             </div>
@@ -154,12 +145,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="true" href="#">Truco</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">21 Black Jack</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Poker</a>
-                        </li>
                     </ul>
                 </div>
                 <div class="card-body">
@@ -183,9 +168,9 @@
                             </div>
 
                         </div>
-                        <div class="container col-2">
-                            <input type="image" src="img/reverso.png" id="btn" class="carta"
-                                onclick="displayHand(), displayRival()">
+                        <div class="container d-flex flex-column justify-content-center col-2">
+                            <input type="image" src="img/reverso.png" id="btn" class="maso"
+                                onclick="displayHand(mazo), displayRival(mazo)">
                         </div>
                         <aside class="col-2">
                             <table>
@@ -241,6 +226,7 @@
     <script src="simulador-truco/array.js"></script>
     <script src="simulador-truco/dom.js"></script>
     <script src="simulador-truco/puntos.js"></script>
+    <script src="simulador-truco/localStorage.js"></script>
     <script src="simulador-truco/simulador-truco.js"></script>
     <script src="/simulador-truco/simulador-envido.js"></script>
     <script src="simulador-truco/manipulacion-carta.js"></script>

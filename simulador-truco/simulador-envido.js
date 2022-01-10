@@ -1,27 +1,16 @@
 //tantos en el envido
 function tantosEnvido (firstCard, secondCard, thirdCard) {
-
-
     //TANTOS JUGADOR
-
     //SI TODAS LAS CARTAS SON IGUALES
     if (firstCard.palo === secondCard.palo && firstCard.palo === thirdCard.palo ) {
+        tantos = "flor"
+        envido.push(tantos)
         console.log("tenes flor")
-    } else { 
+    } else if (firstCard.palo !== secondCard.palo && secondCard.palo !== thirdCard.palo && firstCard.palo !== thirdCard.palo ) { 
         //SI NINGUNA CARTA ES IGUAL
-        if (firstCard.palo !== secondCard.palo && secondCard.palo !== thirdCard.palo ) {
-            if (firstCard.envido >= secondCard.envido) {
-                if (firstCard.envido >= thirdCard.envido) {
-                    tantos = firstCard.envido
-                    envido.push(tantos)
-                    console.log("tantos = " + tantos)
-                } else {
-                    tantos = thirdCard.envido
-                    envido.push(tantos)
-                    console.log("tantos = " + tantos)
-                }
-            } else if(secondCard.envido >= thirdCard.envido) {
-                tantos = secondCard.envido
+        if (firstCard.envido >= secondCard.envido) {
+            if (firstCard.envido >= thirdCard.envido) {
+                tantos = firstCard.envido
                 envido.push(tantos)
                 console.log("tantos = " + tantos)
             } else {
@@ -29,14 +18,20 @@ function tantosEnvido (firstCard, secondCard, thirdCard) {
                 envido.push(tantos)
                 console.log("tantos = " + tantos)
             }
-        }    
+        } else if(secondCard.envido >= thirdCard.envido) {
+            tantos = secondCard.envido
+            envido.push(tantos)
+            console.log("tantos = " + tantos)
+        } else {
+            tantos = thirdCard.envido
+            envido.push(tantos)
+            console.log("tantos = " + tantos)
+        }
+    } else {
 
     //------------------------------------------
     //COMPARACION PRIMER CARTA CON SEGUNDA CARTA
     //-------------------------------------------
-    
-    
-    
     //evaluamos que la primera carta tenga el mismo palo que la segunda
     if (firstCard.palo === secondCard.palo) {
     
@@ -178,26 +173,61 @@ function tantosEnvido (firstCard, secondCard, thirdCard) {
         
         }
     }
-    
-
-    
     console.log("\n\n\n\n\n\n\n\n\n")
     }
 
+let juegoEnvido = false
 
 function cantarEnvido() {
-    if (envido[0] === envido[1]) {
-        alert(` 
-        Tantos Player  ${envido[0]} 
-        tantos rival ${envido[1]}
-        gana player por ser mano`)
-        $("#puntosPlayer").text(sumarPuntosPlayer(2))
+    if (juegoEnvido === false) {
+        juegoEnvido = true
+        if (envido[0] === "flor" && envido[1] === "flor"){
+            alert(` 
+            Player tiene ${envido[0]} 
+            Rival tiene ${envido[1]}
+            Gana player por ser mano`)
+            sumarPuntosPlayer(2)
+            usarLocalStorage()
+            termimarPartida ()
+        } else if (envido[0] === "flor") {
+            alert(` 
+            Gana Player por tener ${envido[0]} `)
+            sumarPuntosPlayer(2)
+            usarLocalStorage()
+            termimarPartida ()
+        } else if (envido[1] === "flor") {
+            alert(`  Rival gana con  ${envido[1]}`)
+            sumarPuntosRival(2)
+            usarLocalStorage()
+            termimarPartida ()
+        } else if (envido[0] === envido[1]) {
+            alert(` 
+            Tantos Player  ${envido[0]} 
+            tantos rival ${envido[1]}
+            gana player por ser mano`)
+            sumarPuntosPlayer(2)
+            usarLocalStorage()
+            termimarPartida ()
+        } else if (envido[0] > envido[1]) {
+            alert(`  Player gana con  ${envido[0]}, sobre los ${envido[1]} del rival `)
+            sumarPuntosPlayer(2)
+            usarLocalStorage()
+            termimarPartida ()
+        } else if (envido[0] < envido[1]) {
+            alert(`  Rival gana con  ${envido[1]}, sobre los ${envido[0]} del Player `)
+            sumarPuntosRival(2)
+            usarLocalStorage()
+            termimarPartida ()
+        }
+    
+        localStorage.setItem('puntosPlayer',puntosPlayer)
+        localStorage.setItem('puntosRival', puntosRival)
+    }else{
+        alert("Envido ya a sido cantado")
     }
-    if (envido[0] > envido[1]) {
-        alert(`  Player gana con  ${envido[0]}, sobre los ${envido[1]} del rival `)
-        $("#puntosPlayer").text(sumarPuntosPlayer(2))
-    } else if (envido[0] < envido[1]) {
-        alert(`  Rival gana con  ${envido[1]}, sobre los ${envido[0]} del Player `)
-        $("#puntosRival").text(sumarPuntosRival(2))
-    }
+}
+
+function reiniciarEnvido() {
+    juegoEnvido = false
+    console.log("let juegoEnvido es: " + juegoEnvido)
 }

@@ -38,10 +38,10 @@ $('#showing').html( `
 
 <div class="d-flex justify-content-around row" id="playerCards">
 <div class="col-6">
-<button id="truco" onclick="btnTruco()">Truco</button>
+<button id="truco" class="desaparecer" onclick="btnTruco()">Truco</button>
 </div>
 <div class="col-6">
-<button id="envido" onclick="cantarEnvido()">Envido</button>
+<button id="envido" class="desaparecer" onclick="cantarEnvido()">Envido</button>
 </div>
 </div>
 `   )
@@ -62,4 +62,5 @@ $('.mano').show("slow")
     tantosEnvido (firstCard, secondCard, thirdCard)
     botones()
     }
+
 

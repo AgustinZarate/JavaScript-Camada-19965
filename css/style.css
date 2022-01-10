@@ -68,7 +68,10 @@ button:hover {
     width: 140px;
     height: 200px;
 }
-
+.maso {
+    width: 140px;
+    height: 200px;
+}
 .presentation-card {
     width: 75px;
 }
@@ -122,3 +125,4 @@ td {
 .toogle-2 {
     display: none;
 }
+
