@@ -1,2 +1,2 @@
-# IMPORTANTE
-La page no funciona bien, descargar el codigo para ver todo el funcionamiento del sitio
+#SIMULADOR DE TRUCO ARGENTINO <br>
+Trabajo realizado por Agustin Zarate con fines educativos. Proyecto para CoderHouse, curso Javascript - Camada 19965, <br> Profesor Arturo Verbel - Tutor Emiliano del Arco
