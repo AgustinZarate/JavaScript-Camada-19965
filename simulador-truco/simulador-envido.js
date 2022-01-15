@@ -83,39 +83,41 @@ function tantosEnvido (firstCard, secondCard, thirdCard) {
     }
 }
 let juegoEnvido = false
+
+let usuario = localStorage.getItem('nombreUsuario')
 function cantarEnvido() {
     if (mesa.length === 0) {
         if (juegoEnvido === false) {
             juegoEnvido = true
             if (envido[0] === "flor" && envido[1] === "flor"){
                 alert(` 
-                Player tiene ${envido[0]} 
-                Rival tiene ${envido[1]}
-                Gana player por ser mano`)
+                ${usuario} tiene ${envido[0]} 
+                Estalinslao tiene ${envido[1]}
+                Gana ${usuario} por ser mano`)
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] === "flor") {
                 alert(` 
-                Gana Player por tener ${envido[0]} `)
+                Gana ${usuario} por tener ${envido[0]} `)
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[1] === "flor") {
-                alert(`  Rival gana con  ${envido[1]}`)
+                alert(`  Estalinslao gana con  ${envido[1]}`)
                 sumarPuntosRival(2)
                 usarLocalStorage()
             } else if (envido[0] === envido[1]) {
                 alert(` 
-                Tantos Player  ${envido[0]} 
-                tantos rival ${envido[1]}
-                gana player por ser mano`)
+                Tantos ${usuario}  ${envido[0]} 
+                tantos Estalinslao ${envido[1]}
+                gana ${usuario} por ser mano`)
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] > envido[1]) {
-                alert(`  Player gana con  ${envido[0]}, sobre los ${envido[1]} del rival `)
+                alert(`  ${usuario} gana con  ${envido[0]}, sobre los ${envido[1]} de Estalinslao `)
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] < envido[1]) {
-                alert(`  Rival gana con  ${envido[1]}, sobre los ${envido[0]} del Player `)
+                alert(`  Estalinslao gana con  ${envido[1]}, sobre los ${envido[0]} de ${usuario} `)
                 sumarPuntosRival(2)
                 usarLocalStorage()
             }
