@@ -10,7 +10,6 @@ function botones() {
 }
 
 function selectedCard(card) {
-    console.log(card)
     let carta = "#" + card
     $(carta).slideUp()
     cartasEnMesa(card)

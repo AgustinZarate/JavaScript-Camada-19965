@@ -44,6 +44,7 @@ function ganadorTruco(){
             rivalHand = []
             envido = []
             numeros = [0,1,2]
+            mesa = []
             puntosPlayerTruco = 0
             puntosRivalTruco = 0
             $('.carta').slideUp()
@@ -51,6 +52,7 @@ function ganadorTruco(){
             termimarPartida ()
             reiniciarTruco()
             reiniciarEnvido()
+            
         } else {
             sumarPuntosPlayer(1)
             alert("Ganaste")
@@ -58,6 +60,7 @@ function ganadorTruco(){
             rivalHand = []
             envido = []
             numeros = [0,1,2]
+            mesa = []
             puntosPlayerTruco = 0
             puntosRivalTruco = 0
             $('.carta').slideUp()
@@ -65,6 +68,7 @@ function ganadorTruco(){
             termimarPartida ()
             reiniciarTruco()
             reiniciarEnvido()
+            
         }
     } else if (puntosRivalTruco == 2 ) {
         if (truco) {
@@ -74,6 +78,7 @@ function ganadorTruco(){
             rivalHand = []
             envido = []
             numeros = [0,1,2]
+            mesa = []
             puntosPlayerTruco = 0
             puntosRivalTruco = 0
             $('.carta').slideUp()
@@ -81,6 +86,7 @@ function ganadorTruco(){
             termimarPartida ()
             reiniciarTruco()
             reiniciarEnvido()
+            
         } else {
             sumarPuntosRival(1)
             alert("Gano el rival")
@@ -88,6 +94,7 @@ function ganadorTruco(){
             rivalHand = []
             envido = []
             numeros = [0,1,2]
+            mesa = []
             puntosPlayerTruco = 0
             puntosRivalTruco = 0
             $('.carta').slideUp()
@@ -95,6 +102,7 @@ function ganadorTruco(){
             termimarPartida ()
             reiniciarTruco()
             reiniciarEnvido()
+            
         }
     }
 }
