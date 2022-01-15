@@ -101,6 +101,7 @@ function ganadorTruco(){
 function btnTruco() {
     if (truco === false) {
         truco = true
+        alert("cantaste truco")
     }else{
         alert("truco ya a sido cantado")
     }

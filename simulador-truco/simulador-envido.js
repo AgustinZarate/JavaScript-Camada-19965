@@ -130,5 +130,4 @@ function cantarEnvido() {
 }
 function reiniciarEnvido() {
     juegoEnvido = false
-    ("let juegoEnvido es: " + juegoEnvido)
 }
