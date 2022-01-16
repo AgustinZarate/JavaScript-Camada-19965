@@ -39,7 +39,14 @@ function ganadorTruco(){
     if (puntosPlayerTruco == 2 ) {
         if (truco) {
             sumarPuntosPlayer(2)
-            alert("Ganaste")
+            VanillaToasts.create({
+                title:'Juego',
+                text: `${usuario} gana esta mano <br>
+                suma 2pt`,
+                type: 'success',
+                icon: 'img/success.png',
+                timeout: 3000,
+             });
             playerHand = []
             rivalHand = []
             envido = []
@@ -55,7 +62,14 @@ function ganadorTruco(){
             
         } else {
             sumarPuntosPlayer(1)
-            alert("Ganaste")
+            VanillaToasts.create({
+                title:'Juego',
+                text: `${usuario} gana esta mano <br>
+                suma 1pt`,
+                type: 'success',
+                icon: 'img/success.png',
+                timeout: 3000,
+             });
             playerHand = []
             rivalHand = []
             envido = []
@@ -73,7 +87,14 @@ function ganadorTruco(){
     } else if (puntosRivalTruco == 2 ) {
         if (truco) {
             sumarPuntosRival(2)
-            alert("Gano el rival")
+            VanillaToasts.create({
+                title:'Juego',
+                text: `Estalinslao gana esta mano <br>
+                suma 2pt`,
+                type: 'error',
+                icon: 'img/error.png',
+                timeout: 3000,
+             });
             playerHand = []
             rivalHand = []
             envido = []
@@ -89,7 +110,14 @@ function ganadorTruco(){
             
         } else {
             sumarPuntosRival(1)
-            alert("Gano el rival")
+            VanillaToasts.create({
+                title:'Juego',
+                text: `Estalinslao gana esta mano <br> 
+                suma 1pt`,
+                type: 'error',
+                icon: 'img/error.png',
+                timeout: 3000,
+             });
             playerHand = []
             rivalHand = []
             envido = []
@@ -109,9 +137,21 @@ function ganadorTruco(){
 function btnTruco() {
     if (truco === false) {
         truco = true
-        alert("cantaste truco")
+        VanillaToasts.create({
+            title:`Truco`,
+            text: `Cantaste truco`,
+            type: `success`,
+            icon: `img/success.png`,
+            timeout: 3000,
+         });
     }else{
-        alert("truco ya a sido cantado")
+        VanillaToasts.create({
+            title:`Truco`,
+            text: `Truco ya a sido cantado`,
+            type: `error`,
+            icon: `img/error.png`,
+            timeout: 3000,
+         });
     }
 
 }

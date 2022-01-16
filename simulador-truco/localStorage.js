@@ -37,7 +37,13 @@ function btnRegistrarse() {
     let usuario = document.getElementById('from_name').value
     localStorage.setItem('nombreUsuario', usuario)
     let nombreUsuario = localStorage.getItem('nombreUsuario')
-    alert("Bienvenido " + nombreUsuario + " ¡Gracias por registrarte!")
+    VanillaToasts.create({
+        title:`Registro`,
+        text: `Usuario nuevo registrado como: <br> ${nombreUsuario} <br> ¡Gracias por registrarte!`,
+        type: `success`,
+        icon: `img/success.png`,
+        timeout: 3000,
+     });
 
     }
     let nombreUsuario = localStorage.getItem('nombreUsuario')

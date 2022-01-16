@@ -90,47 +90,100 @@ function cantarEnvido() {
         if (juegoEnvido === false) {
             juegoEnvido = true
             if (envido[0] === "flor" && envido[1] === "flor"){
-                alert(` 
-                ${usuario} tiene ${envido[0]} 
-                Estalinslao tiene ${envido[1]}
-                Gana ${usuario} por ser mano`)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `${usuario} tiene ${envido[0]} <br>
+                    Estalinslao tiene ${envido[1]} <br>
+                    Gana ${usuario} por ser mano <br>
+                    suma 2pt`,
+                    type: 'success',
+                    icon: 'img/success.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] === "flor") {
-                alert(` 
-                Gana ${usuario} por tener ${envido[0]} `)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `Gana ${usuario} por tener ${envido[0]} <br>
+                    suma 2pt`,
+                    type: 'success',
+                    icon: 'img/success.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[1] === "flor") {
-                alert(`  Estalinslao gana con  ${envido[1]}`)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `Estalinslao gana con  ${envido[1]} <br>
+                    suma 2pt`,
+                    type: 'success',
+                    icon: 'img/error.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosRival(2)
                 usarLocalStorage()
             } else if (envido[0] === envido[1]) {
-                alert(` 
-                Tantos ${usuario}  ${envido[0]} 
-                tantos Estalinslao ${envido[1]}
-                gana ${usuario} por ser mano`)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `Tantos ${usuario}  ${envido[0]} <br>
+                    tantos Estalinslao ${envido[1]} <br>
+                    gana ${usuario} por ser mano <br>
+                    suma 2pt`,
+                    type: 'success',
+                    icon: 'img/success.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] > envido[1]) {
-                alert(`  ${usuario} gana con  ${envido[0]}, sobre los ${envido[1]} de Estalinslao `)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `${usuario} gana con  ${envido[0]}, <br>
+                    sobre los ${envido[1]} de Estalinslao <br>
+                    suma 2pt`,
+                    type: 'success',
+                    icon: 'img/success.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosPlayer(2)
                 usarLocalStorage()
             } else if (envido[0] < envido[1]) {
-                alert(`  Estalinslao gana con  ${envido[1]}, sobre los ${envido[0]} de ${usuario} `)
+                VanillaToasts.create({
+                    title:'Envido',
+                    text: `Estalinslao gana con  ${envido[1]}, <br>
+                    sobre los ${envido[0]} de ${usuario}
+                    suma 2pt`,
+                    type: 'error',
+                    icon: 'img/error.png',
+                    timeout: 3000,
+                 });
                 sumarPuntosRival(2)
                 usarLocalStorage()
             }
             localStorage.setItem('puntosPlayer',puntosPlayer)
             localStorage.setItem('puntosRival', puntosRival)
         }else{
-            alert("Envido ya a sido cantado")
+            VanillaToasts.create({
+                title:`Envido`,
+                text: `Envido ya a sido cantado`,
+                type: `error`,
+                icon: `img/error.png`,
+                timeout: 3000,
+             });
+            
         }
     } else {
-        alert('El Envido solo puede cantarse en la primer mano')
+        VanillaToasts.create({
+            title:`Envido`,
+            text: `El Envido solo puede cantarse en la primer mano`,
+            type: `error`,
+            icon: `img/error.png`,
+            timeout: 3000,
+         });
     }
 }
 function reiniciarEnvido() {
     juegoEnvido = false
-    /* ("let juegoEnvido es: " + juegoEnvido) */
 }

@@ -31,6 +31,9 @@ $("#cartasJerarquia").append(`
         </div>
         <div class="col-4">
         <h4>Cartas buenas para jugar</h4>
+        <span class="span-gris">A partir de aqui las cartas los numeros que se repitan concerban la misma jerarqui, por ende se concidera una empate
+        Ej: Jugador tira 2 copa y rival tira 2 oro son cartas "empardadas" (empate). <br>
+        Recordar que las cartas mas altas NO comparten jerarquia con ninguna otra carta</span>
         <ol start="5">
             <li> Todos los 3️⃣ 😝</li>
 
@@ -51,7 +54,7 @@ $("#cartasJerarquia").append(`
         <div class="col-4">
         <h4>Resto de cartas</h4>
         <hr style="color: black; border: 2px solid;">
-        <span class="span-gris">*En orden numero del mayor al menor</span>
+        <span class="span-gris">*En orden, numero del mayor al menor</span>
         
         <ol start="7">
                 <li> Todos los 11 🐴 🙃</li>
