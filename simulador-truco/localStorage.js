@@ -43,8 +43,8 @@ function btnRegistrarse() {
         type: `success`,
         icon: `img/success.png`,
         timeout: 3000,
-     });
-
+    });
+    location.reload()
     }
     let nombreUsuario = localStorage.getItem('nombreUsuario')
     $('#usuario').append(`
